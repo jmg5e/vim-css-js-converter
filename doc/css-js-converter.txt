@@ -1,0 +1,39 @@
+*css-js-converter.txt*  Simple functions to help make dealing with css in js easier.
+
+Author:  Jared Gailey
+License: Same terms as Vim itself (see |license|)
+
+INTRODUCTION                                    *css-js-converter* *:CssToJs* *:JsToCss*
+
+Convert line from css to json and vice versa,
+
+to use double quotes
+>
+    let g:css_js_converter#doublequotes = 1
+>
+
+Two commands are provided.  
+>
+  :CssToJs
+  :JsToCss
+>
+
+CssToJs *:CssToJs*
+====================================================================
+CssToJs                                     *CssToJs*
+
+convert css hyphen case to camel case, replaces semicolon with comma
+
+before: 
+    background-color: #fffff;
+after
+    backgroundColor: '#fffff',
+
+JsToCss                                     *JsToCss*
+
+convert camel case to hyphencase, replaces comma with semicolon and removes quotes
+
+before: 
+    backgroundColor: '#fffff';
+after
+    background-color: #fffff;
